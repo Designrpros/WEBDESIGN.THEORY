@@ -1,33 +1,32 @@
 # OUT.md — webdesign.theory
 
+## Live
+**URL:** https://designrpros.github.io/WEBDESIGN.THEORY/
+
 ## Hva ble bygget
 Next.js 14 + Tailwind v4 design-theory referanse. 4 sider: brutalism, minimalism, swiss, principles.
 
-## Status
-- ✅ Build: `npm run build` passerer rent
-- ✅ Commit: `91cefd0`
-- ⏳ Push: Trenger GitHub remote + auth
+## Deployment
+- GitHub Actions workflow: `.github/workflows/deploy.yml`
+- Bruker `peaceiris/actions-gh-pages@v3` → pusher til `gh-pages` branch
+- GitHub Pages Source: **Branch `gh-pages` / root**
+- Automatisk deploy ved hver push til `main`
 
-## Slik pusher du selv
-```bash
-cd ~/.peaknode/workspace/projects/webdesigntheory
+## Slik redeployer du
+1. Gå til: **github.com/Designrpros/WEBDESIGN.THEORY/actions**
+2. Klikk på workflow → **Re-run all jobs**
 
-# 1) Lag GitHub repo manuelt på github.com
-# 2) Deretter:
-git remote add origin https://github.com/YOUR_USER/webdesigntheory.git
-git push -u origin main
-
-# Eller med SSH:
-git remote add origin git@github.com:YOUR_USER/webdesigntheory.git
-git push -u origin main
-```
+## Viktig: basePath
+`next.config.js` har `basePath: '/WEBDESIGN.THEORY'` — alle assets/routesPrefikset med `/WEBDESIGN.THEORY/`. Fjern IKKE denne med mindre du deployer til root.
 
 ## Neste steg
-- Legg til flere design movements (glassmorphism, neumorphism, etc.)
-- Legg til interaktive kodeplaygrounds
-- Deploy til Vercel/Netlify
+- [ ] Legg til flere design movements (glassmorphism, neumorphism, etc.)
+- [ ] Legg til interaktive kodeplaygrounds
+- [ ] Oppgrader Next.js (14.2.0 har security vulnerability)
+- [ ] Fiks 7 npm vulnerabilities
 
 ## Agent-log
+- Commit historikk: 8 commits (91cefd0 → d3c468b)
 - Design-system: 17 KB
 - SPEC.md: 11 KB
-- 39 filer, 14962 linjer
+- Workflow iterations: 6+ (vi lærte mye 😅)

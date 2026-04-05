@@ -13,9 +13,9 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export',
-  basePath: '/WEBDESIGN.THEORY',
-  trailingSlash: true,
+  // output: 'export',
+  // basePath: '/WEBDESIGN.THEORY',
+  // trailingSlash: true,
 };
 
 module.exports = nextConfig;
