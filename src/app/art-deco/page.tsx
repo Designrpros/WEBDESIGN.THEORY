@@ -3,17 +3,7 @@
 export default function ArtDecoPage() {
   return (
     <main className="min-h-screen bg-[#0d0d0d] text-[#d4af37]">
-      <header className="sticky top-0 z-50 bg-[#0d0d0d] border-b-2 border-[#d4af37]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-widest uppercase text-[#d4af37]">ART DECO</span>
-          <nav className="flex gap-8 text-sm font-bold uppercase tracking-wider text-[#d4af37]/70">
-            <a href="/" className="hover:text-[#d4af37] transition-colors">Home</a>
-            <a href="/maximalism" className="hover:text-[#d4af37] transition-colors">Maximalism</a>
-          </nav>
-        </div>
-      </header>
-
-      <section className="min-h-[80vh] relative overflow-hidden border-b-2 border-[#d4af37]">
+            <section className="min-h-[80vh] relative overflow-hidden border-b-2 border-[#d4af37]">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-1 bg-[#d4af37]" />
           <div className="absolute bottom-0 left-0 w-full h-1 bg-[#d4af37]" />

@@ -4,18 +4,7 @@ export default function MaximalismPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tight">MAXIMALISM</span>
-          <nav className="flex gap-8 text-sm font-bold uppercase">
-            <a href="/" className="hover:underline decoration-wavy">Home</a>
-            <a href="/brutalism" className="hover:underline decoration-wavy">Brutalism</a>
-            <a href="/minimalism" className="hover:underline decoration-wavy">Minimalism</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero */}
+            {/* Hero */}
       <section className="min-h-[90vh] relative overflow-hidden" style={{
         background: `
           linear-gradient(45deg, #ff6b6b 0%, transparent 50%),

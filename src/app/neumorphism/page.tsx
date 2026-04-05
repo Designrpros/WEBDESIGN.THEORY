@@ -4,18 +4,7 @@ export default function NeumorphismPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-200 to-slate-300">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-slate-200/80 backdrop-blur-lg border-b border-slate-300/50">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tight text-slate-600">NEUMORPHISM</span>
-          <nav className="flex gap-8 text-sm font-bold uppercase">
-            <a href="/" className="text-slate-500 hover:text-slate-700 transition-colors">Home</a>
-            <a href="/brutalism" className="text-slate-500 hover:text-slate-700 transition-colors">Brutalism</a>
-            <a href="/glassmorphism" className="text-slate-500 hover:text-slate-700 transition-colors">Glassmorphism</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero */}
+            {/* Hero */}
       <section className="min-h-[90vh] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-200 via-slate-200 to-slate-300" />
         

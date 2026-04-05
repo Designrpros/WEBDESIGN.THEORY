@@ -152,18 +152,7 @@ export default function CyberpunkPage() {
       `}</style>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#0D0D0D] border-b-2 border-[#FFE600]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tighter neon-text">CYBERPUNK</span>
-          <nav className="flex gap-8 text-sm font-bold text-[#FFE600]/70">
-            <a href="/" className="hover:text-[#FFE600] transition-colors">Home</a>
-            <a href="/neumorphism" className="hover:text-[#FFE600] transition-colors">Neumorphism</a>
-            <a href="/retro-vaporwave" className="hover:text-[#FFE600] transition-colors">Retro/Vaporwave</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero Section */}
+            {/* Hero Section */}
       <section className="min-h-[90vh] relative overflow-hidden border-b-2 border-[#FFE600]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFE600]/5 via-transparent to-transparent" />
         <div className="absolute top-0 left-0 w-full h-1 bg-[#FFE600] shadow-[0_0_20px_#FFE600,0_0_40px_#FFE600]" />

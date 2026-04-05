@@ -69,22 +69,7 @@ export default function MaterialDesignPage() {
       </nav>
 
       {/* Hero Section */}
-      <header style={styles.hero}>
-        <div style={styles.heroContent}>
-          <h1 style={styles.heroTitle}>MATERIAL DESIGN</h1>
-          <p style={styles.heroSubtitle}>
-            Google's design language combining classic principles of good design with innovation
-          </p>
-          <div style={styles.heroBadges}>
-            <span style={styles.heroBadge}>Created by Google</span>
-            <span style={styles.heroBadge}>2014</span>
-            <span style={styles.heroBadge}>Cross-platform</span>
-          </div>
-        </div>
-        <div style={styles.heroShape}></div>
-      </header>
-
-      {/* History Section */}
+            {/* History Section */}
       <section style={styles.section}>
         <div style={styles.sectionContent}>
           <h2 style={styles.sectionTitle}>History & Evolution</h2>

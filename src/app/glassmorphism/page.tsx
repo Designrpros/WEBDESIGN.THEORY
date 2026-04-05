@@ -3,17 +3,7 @@
 export default function GlassmorphismPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/10 border-b border-white/20">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tighter text-white">GLASSMORPHISM</span>
-          <nav className="flex gap-8 text-sm font-bold text-white/80">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/brutalism" className="hover:text-white transition-colors">Brutalism</a>
-          </nav>
-        </div>
-      </header>
-
-      <section className="min-h-[80vh] relative flex items-center justify-center overflow-hidden">
+            <section className="min-h-[80vh] relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl" />

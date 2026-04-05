@@ -3,17 +3,7 @@
 export default function TypographicPage() {
   return (
     <main className="min-h-screen bg-[#fafafa]">
-      <header className="sticky top-0 z-50 bg-[#fafafa] border-b border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tighter text-[#1a1a1a]">TYPOGRAPHIC</span>
-          <nav className="flex gap-8 text-sm font-bold text-[#1a1a1a]">
-            <a href="/" className="hover:underline">Home</a>
-            <a href="/organic-fluid" className="hover:underline">Organic</a>
-          </nav>
-        </div>
-      </header>
-
-      <section className="min-h-[90vh] relative overflow-hidden">
+            <section className="min-h-[90vh] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-32">
           <div className="mb-4">
             <span className="text-xs font-bold uppercase tracking-[0.5em] text-[#666]">Design Concept 08</span>

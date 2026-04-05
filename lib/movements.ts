@@ -1265,6 +1265,1176 @@ Glassmorphism works best with colorful or complex backgrounds that can be blurre
       ],
     },
   },
+  {
+    slug: 'cyberpunk',
+    name: 'Cyberpunk',
+    era: '1980s-present',
+    origin: 'Science Fiction / Japan',
+    accentColor: '#FFE600',
+    description: 'Neon-soaked digital aesthetics inspired by Blade Runner and Akira. Cyberpunk design embraces high contrast, glitch effects, and a dystopian futuristic vision.',
+    keyTraits: [
+      'Neon colors on dark backgrounds',
+      'Glitch effects and distortions',
+      'High contrast color schemes',
+      'Futuristic typography',
+      'Glowing edges and halos',
+    ],
+    principles: [
+      {
+        title: 'Neon on Dark',
+        description: 'The contrast between bright neon and deep darkness creates visual drama. Colors must glow, literally or through careful use of shadows.',
+      },
+      {
+        title: 'Glitch as Aesthetic',
+        description: 'Digital errors and artifacts become design features. Distortion, scan lines, and chromatic aberration are intentional choices.',
+      },
+      {
+        title: 'Dystopian Futurism',
+        description: 'The aesthetic draws from a future that\'s neither utopian nor comfortable. It\'s neon and beautiful, but also gritty and dangerous.',
+      },
+    ],
+    theory: `Cyberpunk design draws from a rich tradition of science fiction that imagines futures where technology is both beautiful and dangerous. The aesthetic emerged in the 1980s with films like Blade Runner and novels like Neuromancer, creating a visual language of neon lights, rain-slicked streets, and megacorporations.
+
+In web design, cyberpunk manifests as dark interfaces punctuated by vivid neon accents. Think black backgrounds with bright cyan, magenta, and yellow glowing elements. Typography often has a digital, glitchy quality. The overall effect is futuristic but grounded in a gritty, lived-in world.
+
+The cyberpunk aesthetic continues to influence game design, music visuals, and creative web experiences. It offers a counter-narrative to the clean, corporate design language that dominates much of the internet.`,
+    visualExamples: [
+      {
+        title: 'Blade Runner (1982)',
+        description: 'The original cyberpunk visual reference with its neon-soaked Los Angeles.',
+      },
+      {
+        title: 'Akira',
+        description: 'Japanese cyberpunk with explosive color and dynamic composition.',
+      },
+      {
+        title: 'Cyberpunk 2077',
+        description: 'Modern video game that embodies the aesthetic in interactive form.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Neon Glow Effect',
+        code: `.neon-glow {
+  color: #FFE600;
+  text-shadow:
+    0 0 5px #FFE600,
+    0 0 10px #FFE600,
+    0 0 20px #FFE600,
+    0 0 40px #00FFFF;
+}`,
+      },
+      {
+        language: 'css',
+        title: 'Glitch Effect',
+        code: `.glitch {
+n  position: relative;
+n}
+n
+.glitch::before,
+.glitch::after {
+n  content: attr(data-text);
+n  position: absolute;
+n  top: 0;
+n  left: 0;
+n  width: 100%;
+n  height: 100%;
+n  background: #0D0D0D;
+n}
+n
+.glitch::before {
+n  left: 2px;
+n  text-shadow: -2px 0 #FF00FF;
+n  clip: rect(24px, 550px, 90px, 0);
+n  animation: glitch-anim 2s infinite linear alternate-reverse;
+n}`,
+      },
+    ],
+    relatedMovements: ['retro-vaporwave', 'brutalism'],
+    playgroundPreset: {
+      html: `<div class="cyber-container">
+  <h1 class="cyber-title" data-text="CYBERPUNK">CYBERPUNK</h1>
+  <p class="cyber-text">Neon dreams in a digital wasteland</p>
+  <button class="cyber-btn">INITIALIZE</button>
+</div>`,
+      css: `.cyber-container {
+  padding: 48px;
+  background: #0D0D0D;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.cyber-title {
+  font-family: 'Courier New', monospace;
+  font-size: 48px;
+  font-weight: 900;
+  color: #FFE600;
+  text-shadow:
+    0 0 5px #FFE600,
+    0 0 10px #FFE600,
+    0 0 20px #00FFFF,
+    0 0 40px #00FFFF;
+  letter-spacing: 0.1em;
+}
+
+.cyber-text {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #00FFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.cyber-btn {
+  background: transparent;
+  color: #FF00FF;
+  border: 2px solid #FF00FF;
+  padding: 12px 32px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px #FF00FF,
+    inset 0 0 10px rgba(255, 0, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cyber-btn:hover {
+  background: #FF00FF;
+  color: #0D0D0D;
+  box-shadow:
+    0 0 20px #FF00FF,
+    0 0 40px #FF00FF;
+}`,
+      controls: [
+        { name: 'Neon Color', property: 'neon-color', type: 'color', default: '#FFE600' },
+        { name: 'Glow Intensity', property: 'glow', type: 'range', min: 5, max: 40, step: 5, default: 20, unit: 'px' },
+        { name: 'Background', property: 'bg-color', type: 'color', default: '#0D0D0D' },
+      ],
+    },
+  },
+  {
+    slug: 'retro-vaporwave',
+    name: 'Retro Vaporwave',
+    era: '2010s-present',
+    origin: 'Internet Culture',
+    accentColor: '#FF71CE',
+    description: 'Nostalgic 80s/90s aesthetics with sunset gradients, palm trees, and grids stretching to infinity. Vaporwave is the sound of a future that never was.',
+    keyTraits: [
+      'Sunset gradient color palettes',
+      'Retro 80s/90s computer aesthetics',
+      'Infinite grid perspectives',
+      'Japanese typography references',
+      'Bronze statues and tropical elements',
+    ],
+    principles: [
+      {
+        title: 'Nostalgic Futurism',
+        description: 'Vaporwave imagines a future that never existed—a 1980s vision of 2016 that mixes corporate mall aesthetics with digital dreams.',
+      },
+      {
+        title: 'Aesthetic Sampling',
+        description: 'Like music sampling, vaporwave design \"samples\" visual elements from commercial culture and recontextualizes them as art.',
+      },
+      {
+        title: 'The Beautiful Decay',
+        description: 'Perfect gradients coexist with glitched textures. The aesthetic embraces both digital perfection and digital decay.',
+      },
+    ],
+    theory: `Vaporwave emerged from internet music communities in the early 2010s as a genre of electronic music that sampled and transformed smooth jazz, R&B, and corporate soundtrack sounds. The visual aesthetic followed naturally—late-night drives through neon-lit cities, palm trees against sunset gradients, and the haunting emptiness of abandoned shopping malls.
+
+The visual language includes:
+- Pink and cyan gradients reminiscent of synth-wave album covers
+- Greek statues and Japanese calligraphy in unexpected combinations
+- Wireframe grid landscapes that stretch to infinity
+- Windows XP-style desktop aesthetics
+- Glitched and corrupted imagery
+
+Vaporwave design in web contexts often features these elements as decorative backgrounds, with content floating above sunset gradients and geometric patterns. The aesthetic is simultaneously nostalgic and futuristic, corporate yet subversive.`,
+    visualExamples: [
+      {
+        title: 'Macintosh Plus',
+        description: 'The aesthetic\'s founding visual reference with its famous broccoli portrait.',
+      },
+      {
+        title: 'Saint Pepsi',
+        description: 'Skiptracing album cover as quintessential vaporwave imagery.',
+      },
+      {
+        title: 'Windows 95 Wallpapers',
+        description: 'The sublime default backgrounds of Generation X\'s digital introduction.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Sunset Gradient',
+        code: `.vaporwave-bg {
+n  background: linear-gradient(
+n    180deg,
+n    #FF71CE 0%,
+n    #01CDFE 50%,
+n    #F5F5F5 100%
+n  );
+}`,
+      },
+      {
+        language: 'css',
+        title: 'Grid Perspective',
+        code: `.vaporwave-grid {
+n  background:
+n    linear-gradient(#FF71CE 2px, transparent 2px),
+n    linear-gradient(90deg, #FF71CE 2px, transparent 2px);
+n  background-size: 50px 50px;
+n  perspective: 500px;
+n  transform: rotateX(60deg);
+}`,
+      },
+    ],
+    relatedMovements: ['cyberpunk', 'grunge-web1'],
+    playgroundPreset: {
+      html: `<div class="vapor-container">
+  <h1 class="vapor-title">VAPORWAVE</h1>
+  <p class="vapor-subtitle">a e s t h e t i c</p>
+  <div class="vapor-grid"></div>
+</div>`,
+      css: `.vapor-container {
+  padding: 48px;
+  background: linear-gradient(
+    180deg,
+    #2D1B4E 0%,
+    #FF71CE 50%,
+    #01CDFE 100%
+  );
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vapor-title {
+  font-family: 'Courier New', monospace;
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    4px 4px 0 #FF71CE,
+    -2px -2px 0 #01CDFE;
+  letter-spacing: 0.2em;
+  z-index: 1;
+}
+
+.vapor-subtitle {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.5em;
+  margin-top: 16px;
+  z-index: 1;
+}
+
+.vapor-grid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background:
+    linear-gradient(90deg, rgba(255, 113, 206, 0.3) 1px, transparent 1px),
+    linear-gradient(rgba(255, 113, 206, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: bottom;
+}`,
+      controls: [
+        { name: 'Pink', property: 'pink', type: 'color', default: '#FF71CE' },
+        { name: 'Cyan', property: 'cyan', type: 'color', default: '#01CDFE' },
+        { name: 'Grid Opacity', property: 'grid-opacity', type: 'range', min: 0.1, max: 0.5, step: 0.1, default: 0.3, unit: '' },
+      ],
+    },
+  },
+  {
+    slug: 'material-design',
+    name: 'Material Design',
+    era: '2014-present',
+    origin: 'Google',
+    accentColor: '#4285F4',
+    description: 'Google\'s design language built on tactile surfaces, shadows, and motion. Material Design brings the physical world into digital interfaces with elevation and light.',
+    keyTraits: [
+      'Elevation through shadows',
+      'Material surfaces with depth',
+      'Motion as feedback',
+      'Google color palette',
+      'Floating Action Buttons (FAB)',
+    ],
+    principles: [
+      {
+        title: 'Material as Metaphor',
+        description: 'Digital surfaces mimic physical materials with distinct textures and shadows. Surfaces can move, combine, and separate like physical paper.',
+      },
+      {
+        title: 'Bold and Graphic',
+        description: 'Typography is big and bold. Colors are from a defined palette. The design language is distinctive and recognizable at a glance.',
+      },
+      {
+        title: 'Motion Provides Meaning',
+        description: 'Animations aren\'t decorative—they communicate state changes and spatial relationships. Motion follows physical laws.',
+      },
+    ],
+    theory: `Material Design was introduced by Google in 2014 at their I/O conference, representing an evolution of Google's visual language. The design system was created by Google Design Team and quickly became one of the most influential design systems of the decade.
+
+The key innovation was treating UI elements as physical materials:
+- Cards are sheets of paper that can float above surfaces
+- Shadows indicate elevation and hierarchy
+- Touch ripples provide feedback
+- Surfaces can contain other surfaces
+
+Material Design also introduced:
+- A defined color system with primary, secondary, and accent colors
+- Roboto as the default typeface
+- Elevation values that create depth hierarchy
+- The Floating Action Button (FAB) as a primary action pattern
+
+The system was designed for cross-platform use, from Android to web to desktop, ensuring consistency across all Google products.`,
+    visualExamples: [
+      {
+        title: 'Google Calendar',
+        description: 'Cards and surfaces with clear elevation hierarchy.',
+      },
+      {
+        title: 'Google Photos',
+        description: 'Material Design in action with floating cards and FAB.',
+      },
+      {
+        title: 'Material Design Guidelines',
+        description: 'The comprehensive documentation of the system itself.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Material Elevation',
+        code: `.material-card {
+n  background: white;
+n  border-radius: 8px;
+n  box-shadow:
+n    0 2px 4px rgba(0,0,0,0.1),
+n    0 4px 8px rgba(0,0,0,0.1),
+n    0 8px 16px rgba(0,0,0,0.1);
+n  padding: 24px;
+}
+
+.material-elevated {
+n  box-shadow:
+n    0 4px 8px rgba(0,0,0,0.15),
+n    0 8px 16px rgba(0,0,0,0.15),
+n    0 16px 32px rgba(0,0,0,0.1);
+}`,
+      },
+    ],
+    relatedMovements: ['glassmorphism', 'neumorphism'],
+    playgroundPreset: {
+      html: `<div class="material-container">
+  <div class="material-card">
+    <h2 class="material-title">Material Design</h2>
+    <p class="material-text">Surfaces with depth and shadows.</p>
+  </div>
+  <button class="material-fab">+</button>
+</div>`,
+      css: `.material-container {
+  padding: 48px;
+  background: #FAFAFA;
+  min-height: 400px;
+  position: relative;
+}
+
+.material-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 400px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.1),
+    0 4px 8px rgba(0,0,0,0.1);
+}
+
+.material-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #202124;
+  margin: 0 0 8px 0;
+}
+
+.material-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #5F6368;
+  margin: 0;
+}
+
+.material-fab {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  font-size: 24px;
+  box-shadow:
+    0 4px 8px rgba(66, 133, 244, 0.4),
+    0 8px 16px rgba(66, 133, 244, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.material-fab:hover {
+  box-shadow:
+    0 6px 12px rgba(66, 133, 244, 0.5),
+    0 12px 24px rgba(66, 133, 244, 0.3);
+}`,
+      controls: [
+        { name: 'Primary Color', property: 'primary', type: 'color', default: '#4285F4' },
+        { name: 'Elevation', property: 'elevation', type: 'range', min: 1, max: 4, step: 1, default: 2, unit: '' },
+        { name: 'Background', property: 'bg-color', type: 'color', default: '#FAFAFA' },
+      ],
+    },
+  },
+  {
+    slug: 'organic-fluid',
+    name: 'Organic Fluid',
+    era: '2020s-present',
+    origin: 'Digital Native',
+    accentColor: '#A78BFA',
+    description: 'Soft, flowing shapes with blobby forms and gentle curves. Organic design breaks away from rigid geometry to create approachable, human interfaces.',
+    keyTraits: [
+      'Blobby, irregular shapes',
+      'Large border-radius values',
+      'Pastel color palettes',
+      'Soft gradients',
+      'Natural, flowing forms',
+    ],
+    principles: [
+      {
+        title: 'Away from Rigidity',
+        description: 'Organic design rejects the strict rectangles and sharp corners of conventional design in favor of shapes that feel more natural and human.',
+      },
+      {
+        title: 'Approachable and Friendly',
+        description: 'The soft forms and pastel colors create an immediately warm and inviting aesthetic that feels approachable.',
+      },
+      {
+        title: 'Fluidity as Concept',
+        description: 'Shapes can flow into each other, overlap, and blend. The design feels alive rather than static.',
+      },
+    ],
+    theory: `Organic design emerged as a counter-movement to the sharp, geometric aesthetics that dominated UI design in the late 2010s. Where flat design and Material Design emphasized clean edges and clear hierarchy, organic design introduces softness and irregularity.
+
+The blobby shapes characteristic of organic design are often created using:
+- Very large border-radius values
+- SVG paths with irregular curves
+- CSS clip-path with complex shapes
+- Animated morphing between shapes
+
+Color palettes tend toward soft pastels:
+- Lavender and violet tones
+- Peach and coral accents
+- Mint and seafoam greens
+- Soft yellows and creams
+
+The aesthetic has been particularly popular in:
+- Children and family-oriented apps
+- Wellness and meditation products
+- Creative and artistic platforms
+- Fashion and lifestyle brands`,
+    visualExamples: [
+      {
+        title: 'Apple Music Replay',
+        description: 'Flowing gradients and organic shapes in playlists.',
+      },
+      {
+        title: 'Notion',
+        description: 'Soft edges and approachable design language.',
+      },
+      {
+        title: 'Figma Components',
+        description: 'Modern tools embracing organic aesthetics.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Blobby Shape',
+        code: `.blobby {
+n  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+n  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+n  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+n  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}`,
+      },
+    ],
+    relatedMovements: ['glassmorphism', 'neumorphism'],
+    playgroundPreset: {
+      html: `<div class="organic-container">
+  <div class="blobby-shape"></div>
+  <div class="blobby-shape secondary"></div>
+  <h2 class="organic-title">Organic</h2>
+</div>`,
+      css: `.organic-container {
+  padding: 48px;
+  background: linear-gradient(135deg, #FDF2F8 0%, #FAF5FF 100%);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blobby-shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #A78BFA 0%, #F472B6 100%);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+}
+
+.blobby-shape.secondary {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #34D399 0%, #22D3EE 100%);
+  animation-delay: -3s;
+  opacity: 0.4;
+}
+
+.organic-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: #7C3AED;
+  z-index: 1;
+  margin: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}`,
+      controls: [
+        { name: 'Primary Color', property: 'primary', type: 'color', default: '#A78BFA' },
+        { name: 'Secondary Color', property: 'secondary', type: 'color', default: '#F472B6' },
+        { name: 'Animation Speed', property: 'speed', type: 'range', min: 2, max: 12, step: 1, default: 6, unit: 's' },
+      ],
+    },
+  },
+  {
+    slug: 'typographic',
+    name: 'Typographic',
+    era: '1990s-present',
+    origin: 'Print Design / Switzerland',
+    accentColor: '#1A1A1A',
+    description: 'When letters become the design. Typographic design makes typography the primary visual element, creating striking compositions through type alone.',
+    keyTraits: [
+      'Massive headline typography',
+      'Display and serif fonts',
+      'Typography as imagery',
+      'Minimal other elements',
+      'High contrast in scale',
+    ],
+    principles: [
+      {
+        title: 'Type as Hero',
+        description: 'Typography isn\'t just for reading—it IS the visual. Large type creates immediate impact and emotional response.',
+      },
+      {
+        title: 'Scale Creates Hierarchy',
+        description: 'Extreme differences in font size between headlines and body text create clear hierarchy without additional decoration.',
+      },
+      {
+        title: 'Space is Elemental',
+        description: 'The space around and within letters is as important as the letters themselves. Negative space becomes a design tool.',
+      },
+    ],
+    theory: `Typographic design has roots in the Swiss International Style, where typography was recognized as the primary carrier of visual hierarchy. But Typographic design pushes this further, making letters themselves the primary visual element.
+
+The approach is simple but demanding:
+- Choose spectacular display fonts or use standard fonts spectacularly
+- Scale typography to fill space dramatically
+- Let letters break grids, overlap, and create composition
+- Use typography to evoke emotion before words are read
+
+Key techniques include:
+- Kerning and tracking adjustments for visual effect
+- Using Google Fonts' display options
+- Layering multiple text elements
+- Angling and rotating typography
+- Mixing font weights dramatically
+
+The aesthetic works best for:
+- Brand identities
+- Editorial headlines
+- Posters and signage
+- Portfolio presentations`,
+    visualExamples: [
+      {
+        title: 'Bloomberg Businessweek',
+        description: 'Typography-dominant editorial design.',
+      },
+      {
+        title: 'The New York Times',
+        description: 'Dramatic typographic scale in headlines.',
+      },
+      {
+        title: 'Nike Campaigns',
+        description: 'Massive typography as imagery.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Massive Display Type',
+        code: `.display-type {
+n  font-family: 'Playfair Display', serif;
+n  font-size: clamp(4rem, 15vw, 12rem);
+n  font-weight: 900;
+n  line-height: 0.9;
+n  letter-spacing: -0.03em;
+}`,
+      },
+    ],
+    relatedMovements: ['swiss-design', 'minimalism', 'brutalism'],
+    playgroundPreset: {
+      html: `<div class="typo-container">
+  <h1 class="typo-display" style="font-family: 'Playfair Display', serif">TYPO</h1>
+  <h1 class="typo-display accent" style="font-family: 'Inter', sans-serif">GRAPHIC</h1>
+  <p class="typo-text">When letters become the design</p>
+</div>`,
+      css: `.typo-container {
+  padding: 48px;
+  background: #FAFAF8;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.typo-display {
+  font-size: clamp(80px, 20vw, 200px);
+  font-weight: 900;
+  line-height: 0.85;
+  margin: 0;
+  color: #1a1a1a;
+  letter-spacing: -0.05em;
+}
+
+.typo-display.accent {
+  color: transparent;
+  -webkit-text-stroke: 3px #1a1a1a;
+}
+
+.typo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-top: 24px;
+}`,
+      controls: [
+        { name: 'Display Size', property: 'display-size', type: 'range', min: 60, max: 200, step: 10, default: 120, unit: 'px' },
+        { name: 'Text Color', property: 'color', type: 'color', default: '#1a1a1a' },
+        { name: 'Stroke Width', property: 'stroke', type: 'range', min: 1, max: 5, step: 1, default: 3, unit: 'px' },
+      ],
+    },
+  },
+  {
+    slug: 'grunge-web1',
+    name: 'Grunge Web 1.0',
+    era: '1994-2005',
+    origin: 'World Wide Web',
+    accentColor: '#0000FF',
+    description: 'The raw, unpolished aesthetics of early web design. Blue links, hit counters, under construction signs, and the honest ugliness of first-generation websites.',
+    keyTraits: [
+      'Blue underlined links',
+      'Beveled 3D buttons',
+      'Hit counters and guestbooks',
+      'Animated GIFs',
+      'Table-based layouts',
+    ],
+    principles: [
+      {
+        title: 'Function Over Form',
+        description: 'Websites were built to share information, not impress. Every element served a purpose, even if it looked terrible.',
+      },
+      {
+        title: 'No Pretension',
+        description: 'Early web designers didn\'t know what they were doing, and it showed. This authenticity is now revered as honest.',
+      },
+      {
+        title: 'Under Construction',
+        description: 'Websites were perpetually unfinished, with the "Under Construction" banner acknowledging that nothing on the web was ever done.',
+      },
+    ],
+    theory: `Before CSS was widely supported and before designers "discovered" the web, there was Web 1.0. This era of web design (roughly 1994-2005) was characterized by:
+
+Visual Elements:
+- The blue #0000FF underlined link that everyone recognized
+- The beveled, 3D-effect button using border tricks
+- Hit counters showing visitor numbers in digital LCD font
+- Animated GIFs of construction signs, flames, and spinning globes
+- "Best viewed in Netscape Navigator" badges
+- Table-based layouts for structure
+- The "Under Construction" banner
+
+Cultural Context:
+- HTML was for structure, not style
+- Dreamweaver and FrontPage were the design tools
+- GeoCities gave everyone a homepage
+- Visitor counters were a point of pride
+- Guestbooks allowed visitor interaction
+- "Email me!" was the call-to-action
+
+Today, Web 1.0 aesthetics are experiencing ironic appreciation. The ugliness is charming precisely because it was genuine—no one was trying to create an aesthetic movement.`,
+    visualExamples: [
+      {
+        title: 'Craigslist',
+        description: 'Pure functional Web 1.0 that never changed.',
+      },
+      {
+        title: 'GeoCities Archives',
+        description: 'The quintessential homepage aesthetic.',
+      },
+      {
+        title: 'Early Amazon',
+        description: 'How the e-commerce giant started.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: '3D Beveled Button',
+        code: `.web1-button {
+n  background: #c0c0c0;
+n  border: 4px solid #808080;
+n  border-top-color: #ffffff;
+n  border-left-color: #ffffff;
+n  padding: 8px 16px;
+n  font-weight: bold;
+}`,
+      },
+      {
+        language: 'css',
+        title: 'Classic Blue Link',
+        code: `.web1-link {
+n  color: #0000ff;
+n  text-decoration: underline;
+n}
+n
+.web1-link:hover {
+n  color: #ff0000;
+}`,
+      },
+    ],
+    relatedMovements: ['brutalism', 'retro-vaporwave'],
+    playgroundPreset: {
+      html: `<div class="web1-container">
+  <div class="web1-header">WELCOME TO MY HOMEPAGE!!!</div>
+  <nav class="web1-nav">
+    <a href="#" class="web1-link">Home</a>
+    <a href="#" class="web1-link">About Me</a>
+    <a href="#" class="web1-link">Cool Links</a>
+  </nav>
+  <div class="web1-content">
+    <p>Thanks for visiting my website!!!</p>
+    <button class="web1-button">EMAIL ME!!!</button>
+  </div>
+  <div class="web1-counter">You are visitor: 000001</div>
+</div>`,
+      css: `.web1-container {
+  padding: 24px;
+  background: #ffffff;
+  font-family: Georgia, serif;
+  max-width: 600px;
+}
+
+.web1-header {
+  background: #000080;
+  color: #ffff00;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  border: 3px outset #c0c0c0;
+}
+
+.web1-nav {
+  background: #c0c0c0;
+  padding: 8px;
+  border: 3px outset #808080;
+  border-top: none;
+}
+
+.web1-link {
+  color: #0000ff;
+  text-decoration: underline;
+  margin-right: 16px;
+}
+
+.web1-link:hover {
+  color: #ff0000;
+}
+
+.web1-content {
+  padding: 24px;
+  border: 3px outset #808080;
+  border-top: none;
+}
+
+.web1-button {
+  background: #c0c0c0;
+  border: 4px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.web1-counter {
+  background: #000000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  padding: 8px;
+  text-align: center;
+  margin-top: 16px;
+}`,
+      controls: [
+        { name: 'Link Color', property: 'link-color', type: 'color', default: '#0000FF' },
+        { name: 'Background', property: 'bg-color', type: 'color', default: '#FFFFFF' },
+        { name: 'Counter Color', property: 'counter-color', type: 'color', default: '#00FF00' },
+      ],
+    },
+  },
+  {
+    slug: 'maximalism',
+    name: 'Maximalism',
+    era: '1981-present',
+    origin: 'Italy / Global',
+    accentColor: '#F472B6',
+    description: 'More is more. Maximalism rejects minimalism\'s restraint in favor of bold colors, layered patterns, and unapologetically loud design.',
+    keyTraits: [
+      'Multiple mixed patterns',
+      'Bold saturated colors',
+      'Layered elements',
+      'Ornate decoration',
+      'Visual density',
+    ],
+    principles: [
+      {
+        title: 'More Is More',
+        description: 'The minimalism mantra of "less is more" is rejected. More colors, more patterns, more elements create visual richness.',
+      },
+      {
+        title: 'Layering Creates Depth',
+        description: 'Multiple overlapping elements create visual complexity. Nothing is hidden—everything is revealed.',
+      },
+      {
+        title: 'No Apologies',
+        description: 'Maximalist design commits fully. There\'s no half-measured restraint or modest decoration. The aesthetic is loud and proud.',
+      },
+    ],
+    theory: `Maximalism as a design movement has roots in the 1981 founding of the Memphis Group in Milan. Founded by Ettore Sottsass and others, the Memphis Group deliberately rejected the clean, minimal aesthetics that had dominated design since Bauhaus.
+
+Their manifesto included:
+- Bold primary colors mixed with pastels and metallics
+- Geometric and organic shapes combined freely
+- Patterns layered over patterns
+- Decorated surfaces that rejected "good taste"
+- Furniture that looked like it was designed by an excited child
+
+In contemporary web design, maximalism appears as:
+- Multiple gradient backgrounds
+- Pattern overlays and textures
+- Large, bold typography in varied styles
+- Color palettes that clash intentionally
+- Decorative elements everywhere
+
+The aesthetic challenges designers to commit rather than hold back. In a world of minimal corporate design, maximalism stands out through its confident excess.`,
+    visualExamples: [
+      {
+        title: 'Memphis Group Furniture',
+        description: 'The original maximalist objects.',
+      },
+      {
+        title: 'Spotify Year in Review',
+        description: 'Colorful, pattern-heavy social features.',
+      },
+      {
+        title: 'Figma Config',
+        description: 'Conference branding embracing the aesthetic.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Pattern Overload',
+        code: `.maximalist-bg {
+n  background:
+n    repeating-linear-gradient(
+n      45deg,
+n      #f472b6,
+n      #f472b6 10px,
+n      #fbbf24 10px,
+n      #fbbf24 20px
+n    ),
+n    linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}`,
+      },
+    ],
+    relatedMovements: ['memphis', 'retro-vaporwave'],
+    playgroundPreset: {
+      html: `<div class="max-container">
+  <h1 class="max-title">MORE</h1>
+  <p class="max-subtitle">IS MORE</p>
+  <div class="max-patterns">
+    <span class="max-tag">CHAOS</span>
+    <span class="max-tag">COLOR</span>
+    <span class="max-tag">MORE</span>
+  </div>
+</div>`,
+      css: `.max-container {
+  padding: 48px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(244, 114, 182, 0.3),
+      rgba(244, 114, 182, 0.3) 20px,
+      rgba(251, 191, 36, 0.3) 20px,
+      rgba(251, 191, 36, 0.3) 40px
+    );
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #1a1a1a;
+}
+
+.max-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  color: #f472b6;
+  text-shadow:
+    4px 4px 0 #fbbf24,
+    8px 8px 0 #a855f7;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.max-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #a855f7;
+  margin: 0;
+}
+
+.max-patterns {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.max-tag {
+  background: linear-gradient(135deg, #f472b6 0%, #fbbf24 100%);
+  color: #1a1a1a;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 12px;
+  border: 4px solid #1a1a1a;
+  box-shadow: 4px 4px 0 #1a1a1a;
+}`,
+      controls: [
+        { name: 'Primary Color', property: 'primary', type: 'color', default: '#F472B6' },
+        { name: 'Secondary Color', property: 'secondary', type: 'color', default: '#FBBF24' },
+        { name: 'Accent Color', property: 'accent', type: 'color', default: '#A855F7' },
+      ],
+    },
+  },
+  {
+    slug: 'art-deco',
+    name: 'Art Deco',
+    era: '1920s-1940s',
+    origin: 'France',
+    accentColor: '#D4AF37',
+    description: 'Geometric elegance and luxurious sophistication. Art Deco channels the golden age with gold accents, bold lines, and ornamental patterns.',
+    keyTraits: [
+      'Gold and metallic accents',
+      'Geometric symmetry',
+      'Bold lines and borders',
+      'Sunburst and chevron patterns',
+      'Luxurious color palette',
+    ],
+    principles: [
+      {
+        title: 'Luxury Through Simplicity',
+        description: 'Art Deco achieves luxury not through excess but through bold, confident geometry. Gold lines and clean shapes convey sophistication.',
+      },
+      {
+        title: 'Geometry as Ornament',
+        description: 'Geometric shapes—triangles, circles, chevrons—create decorative patterns that feel both modern and timeless.',
+      },
+      {
+        title: 'Symmetry Commands Attention',
+        description: 'Centered, symmetrical layouts create formal grandeur. The composition itself conveys authority and elegance.',
+      },
+    ],
+    theory: `Art Deco emerged in France in the 1920s, reaching its peak in the 1930s before World War II diminished its cultural dominance. The style represented luxury, glamour, and technological progress during an era of economic prosperity.
+
+Key visual elements:
+- Gold and metallic color accents
+- Black and white contrast
+- Sunburst and sunrise patterns
+- Chevrons and angular geometry
+- Stylized natural forms
+- Geometric repetition
+
+Famous Art Deco landmarks include:
+- The Chrysler Building in New York
+- The Paramount Pictures logo
+- The Empire State Building
+- Ocean liner interiors
+- Hollywood film titles of the era
+
+In web design, Art Deco aesthetics translate to:
+- Gold gradients and accents
+- Geometric border patterns
+- Symmetrical layouts
+- Bold black and white contrasts
+- Ornamental dividers and flourishes`,
+    visualExamples: [
+      {
+        title: 'Chrysler Building',
+        description: 'The iconic crown with sunburst patterns.',
+      },
+      {
+        title: 'Paramount Pictures',
+        description: 'Classic studio logo design.',
+      },
+      {
+        title: 'Gatsby-Era Posters',
+        description: 'Period advertising and graphic design.',
+      },
+    ],
+    codeSnippets: [
+      {
+        language: 'css',
+        title: 'Art Deco Border',
+        code: `.art-deco-frame {
+n  border: 3px solid #D4AF37;
+n  position: relative;
+n}
+n
+.art-deco-corner {
+n  position: absolute;
+n  width: 20px;
+n  height: 20px;
+n  border: 3px solid #D4AF37;
+n}`,
+      },
+    ],
+    relatedMovements: ['memphis'],
+    playgroundPreset: {
+      html: `<div class="deco-container">
+  <div class="deco-frame">
+    <div class="deco-corner tl"></div>
+    <div class="deco-corner tr"></div>
+    <div class="deco-corner bl"></div>
+    <div class="deco-corner br"></div>
+    <h1 class="deco-title">ART DECO</h1>
+    <div class="deco-divider"></div>
+    <p class="deco-subtitle">The Golden Age</p>
+  </div>
+</div>`,
+      css: `.deco-container {
+  padding: 48px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deco-frame {
+  position: relative;
+  border: 4px solid #D4AF37;
+  padding: 48px 64px;
+  text-align: center;
+}
+
+.deco-corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #D4AF37;
+}
+
+.deco-corner.tl { top: -4px; left: -4px; border-right: none; border-bottom: none; }
+.deco-corner.tr { top: -4px; right: -4px; border-left: none; border-bottom: none; }
+.deco-corner.bl { bottom: -4px; left: -4px; border-right: none; border-top: none; }
+.deco-corner.br { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+
+.deco-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #D4AF37;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.deco-divider {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 24px 0;
+}
+
+.deco-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #888;
+  letter-spacing: 0.2em;
+  margin: 0;
+}`,
+      controls: [
+        { name: 'Gold Color', property: 'gold', type: 'color', default: '#D4AF37' },
+        { name: 'Border Width', property: 'border', type: 'range', min: 2, max: 8, step: 1, default: 4, unit: 'px' },
+        { name: 'Background', property: 'bg-color', type: 'color', default: '#1a1a1a' },
+      ],
+    },
+  },
 ];
 
 export function getMovementBySlug(slug: string): Movement | undefined {

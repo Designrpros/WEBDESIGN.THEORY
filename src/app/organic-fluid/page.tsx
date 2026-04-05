@@ -10,18 +10,7 @@ export default function OrganicFluidPage() {
       <div className="absolute bottom-40 right-1/4 w-64 h-64 bg-gradient-to-br from-fuchsia-200/40 to-pink-200/40 rounded-[40%_60%_30%_70%_/_70%_40%_60%_30%] blur-3xl" />
 
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-lg bg-white/60 border-b border-purple-100/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">ORGANIC FLUID</span>
-          <nav className="flex gap-8 text-sm font-bold text-purple-700">
-            <a href="/" className="hover:text-pink-600 transition-colors">Home</a>
-            <a href="/glassmorphism" className="hover:text-pink-600 transition-colors">Glassmorphism</a>
-            <a href="/neumorphism" className="hover:text-pink-600 transition-colors">Neumorphism</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero Section */}
+            {/* Hero Section */}
       <section className="min-h-[80vh] relative flex items-center justify-center overflow-hidden px-6">
         <div className="relative z-10 text-center">
           <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-200/80 to-pink-200/80 border border-purple-300/50 text-sm font-bold text-purple-700 mb-8 backdrop-blur-sm shadow-lg shadow-purple-200/50">

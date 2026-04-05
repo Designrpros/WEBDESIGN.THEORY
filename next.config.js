@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  turbopack: {
+    root: './',
+  },
   images: {
     remotePatterns: [
       {
@@ -13,9 +16,9 @@ const nextConfig = {
       },
     ],
   },
-  // output: 'export',
-  // basePath: '/WEBDESIGN.THEORY',
-  // trailingSlash: true,
+  output: 'export',
+  basePath: '/WEBDESIGN.THEORY',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

@@ -51,18 +51,7 @@ export default function BrutalismPage() {
   return (
     <main className="min-h-screen bg-yellow-400 text-black">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-black text-yellow-400 border-b-4 border-yellow-400">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-2xl font-black tracking-tighter">BRUTALISM</span>
-          <nav className="flex gap-8 text-sm font-black uppercase">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/minimalism" className="hover:text-white transition-colors">Minimalism</a>
-            <a href="/swiss" className="hover:text-white transition-colors">Swiss</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero */}
+            {/* Hero */}
       <section className="min-h-[80vh] bg-yellow-400 border-b-8 border-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
           <span className="inline-block bg-black text-yellow-400 px-4 py-2 text-sm font-black uppercase">Design Concept 01</span>

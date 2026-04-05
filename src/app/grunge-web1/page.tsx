@@ -4,19 +4,7 @@ export default function GrungeWeb1Page() {
   return (
     <main className="min-h-screen bg-[#cccccc] text-black">
       {/* Header - classic Web 1.0 style */}
-      <header className="bg-[#000080] text-white">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-wide">MY COOL WEBSITE</span>
-          <nav className="flex gap-4 text-sm underline">
-            <a href="/" className="hover:text-yellow-400">Home</a>
-            <a href="/brutalism" className="hover:text-yellow-400">About</a>
-            <a href="/minimalism" className="hover:text-yellow-400">Links</a>
-            <a href="/swiss" className="hover:text-yellow-400">Contact</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero - Retro Web 1.0 style */}
+            {/* Hero - Retro Web 1.0 style */}
       <section className="min-h-[80vh] bg-[#cccccc] py-16 px-6 relative">
         {/* Fake browser chrome */}
         <div className="max-w-4xl mx-auto border-4 border-[#000080] bg-white">
