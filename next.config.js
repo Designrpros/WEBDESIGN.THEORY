@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
@@ -12,6 +13,9 @@ const nextConfig = {
       },
     ],
   },
+  output: 'export',
+  basePath: '/WEBDESIGN.THEORY',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
