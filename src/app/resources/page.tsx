@@ -1,0 +1,65 @@
+'use client';
+
+const resources = [
+  { category: 'Learn Design Theory', items: [
+    { title: 'Awwwards', url: 'https://www.awwwards.com', desc: 'Web design inspiration gallery. Curated award-winning sites.' },
+    { title: 'Dribbble', url: 'https://dribbble.com', desc: 'Design portfolio community. Shots, mockups, UI trends.' },
+    { title: 'Behance', url: 'https://www.behance.net', desc: 'Adobe\'s design showcase. High-quality creative work.' },
+    { title: 'Design Museum', url: 'https://designmuseum.org', desc: 'Physical and digital design exhibitions. History meets contemporary.' },
+    { title: 'Smashing Magazine', url: 'https://www.smashingmagazine.com', desc: 'Web development and design articles. Deep technical content.' },
+  ]},
+  { category: 'Tools', items: [
+    { title: 'Figma', url: 'https://figma.com', desc: 'Collaborative design tool. Free tier available.' },
+    { title: 'Tailwind CSS', url: 'https://tailwindcss.com', desc: 'Utility-first CSS framework. The standard for modern web styling.' },
+    { title: 'Google Fonts', url: 'https://fonts.google.com', desc: 'Free fonts for web and print. 1500+ families.' },
+    { title: 'Coolors', url: 'https://coolors.co', desc: 'Color palette generator. Fast, beautiful color schemes.' },
+    { title: 'Fontpair', url: 'https://fontpair.co', desc: 'Font pairing suggestions. Typography made easier.' },
+  ]},
+  { category: 'Inspiration', items: [
+    { title: 'Designspiration', url: 'https://www.designspiration.com', desc: 'Visual search for design ideas. Pinterest-like but focused.' },
+    { title: 'Pinterest', url: 'https://www.pinterest.com', desc: 'Visual bookmarking. Boards for every design niche.' },
+    { title: 'Land Book', url: 'https://land-book.com', desc: 'Landing page inspiration. Minimal, focused showcase.' },
+    { title: 'Httpster', url: 'https://httpster.net', desc: 'Web design showcase. Bold, creative sites.' },
+    { title: 'Calls', url: 'https://www.stcall.com', desc: 'Minimal site gallery. Clean and simple.' },
+  ]},
+  { category: 'Code & Development', items: [
+    { title: 'MDN Web Docs', url: 'https://developer.mozilla.org', desc: 'The definitive web documentation. HTML, CSS, JS reference.' },
+    { title: 'CSS Tricks', url: 'https://css-tricks.com', desc: 'CSS articles and guides. The almanac is gold.' },
+    { title: 'Stack Overflow', url: 'https://stackoverflow.com', desc: 'Q&A for developers. Someone has asked your question before.' },
+    { title: 'CodePen', url: 'https://codepen.io', desc: 'Frontend code playground. Share and discover snippets.' },
+    { title: 'GitHub', url: 'https://github.com', desc: 'Code hosting and collaboration. Open source everything.' },
+  ]},
+];
+
+export default function ResourcesPage() {
+  return (
+    <div className="min-h-screen bg-minimalist-offwhite">
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <h1 className="text-6xl font-black uppercase tracking-tighter text-minimalist-charcoal mb-4">Resources</h1>
+        <p className="text-xl text-minimalist-gray mb-16 max-w-xl">Tools, inspiration, and learning for designers and developers.</p>
+
+        <div className="space-y-16">
+          {resources.map((section, i) => (
+            <div key={i}>
+              <h2 className="text-2xl font-bold text-swiss-red uppercase tracking-wide mb-8">{section.category}</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {section.items.map((item, j) => (
+                  <a
+                    key={j}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-white p-6 border border-minimalist-charcoal/10 hover:border-swiss-red transition-colors group"
+                  >
+                    <h3 className="font-bold text-minimalist-charcoal group-hover:text-swiss-red transition-colors mb-2">{item.title}</h3>
+                    <p className="text-sm text-minimalist-gray">{item.desc}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
