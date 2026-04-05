@@ -50,25 +50,7 @@ export default function MaterialDesignPage() {
 
   return (
     <div style={styles.page}>
-      {/* Navigation Bar */}
-      <nav style={styles.nav}>
-        <div style={styles.navContent}>
-          <div style={styles.navLeft}>
-            <svg style={styles.navIcon} viewBox="0 0 24 24" fill="none">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#4285F4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span style={styles.navTitle}>Web Design Theory</span>
-          </div>
-          <div style={styles.navLinks}>
-            <a href="#" style={styles.navLink}>Home</a>
-            <a href="#" style={styles.navLink}>Principles</a>
-            <a href="#" style={styles.navLinkActive}>Material Design</a>
-            <a href="#" style={styles.navLink}>Resources</a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
+{/* Hero Section */}
             {/* History Section */}
       <section style={styles.section}>
         <div style={styles.sectionContent}>
