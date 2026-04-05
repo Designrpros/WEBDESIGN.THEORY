@@ -1,0 +1,1045 @@
+@import "tailwindcss";
+
+@theme {
+  /* Swiss Design Colors */
+  --color-swiss-red: #E30613;
+  --color-swiss-black: #1A1A1A;
+  --color-swiss-white: #FFFFFF;
+  --color-swiss-offwhite: #F5F5F0;
+  --color-swiss-gray-100: #EBEBEB;
+  --color-swiss-gray-200: #D4D4D4;
+  --color-swiss-gray-300: #A3A3A3;
+  --color-swiss-gray-400: #737373;
+  --color-swiss-gray-500: #525252;
+
+  /* Poolsuite Retro Colors */
+  --color-pool-coral: #FF6B6B;
+  --color-pool-mint: #4ECDC4;
+  --color-pool-lavender: #9B89B3;
+  --color-pool-peach: #FFE66D;
+  --color-pool-sky: #7EC8E3;
+  --color-pool-coral-dark: #E85A5A;
+  --color-pool-mint-dark: #3DBDB5;
+  
+  /* Retro Neutrals */
+  --color-retro-cream: #FFF8F0;
+  --color-retro-sand: #E8DED5;
+  --color-retro-brown: #8B7355;
+  --color-retro-charcoal: #2D2D2D;
+  --color-retro-warmgray: #9A8F86;
+  
+  /* Brutalist kept for structure */
+  --color-brutalist-black: #1A1A1A;
+  --color-brutalist-yellow: #FFE135;
+  
+  /* Minimalist Design System Colors */
+  --color-minimalist-offwhite: #FAFAF8;
+  --color-minimalist-charcoal: #2C2C2C;
+  --color-minimalist-gray: #8A8A8A;
+  --color-minimalist-light-gray: #E5E5E3;
+  --color-minimalist-border: #E8E8E6;
+  
+  /* Fonts */
+  --font-family-display: var(--font-inter), system-ui, sans-serif;
+  --font-family-mono: var(--font-jetbrains), monospace;
+}
+
+/* Poolsuite Component Styles */
+@layer components {
+  .pool-card {
+    border: 3px solid var(--color-brutalist-black);
+    background-color: var(--color-pool-coral);
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0 var(--color-brutalist-black);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .pool-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--color-brutalist-black);
+  }
+
+  .pool-btn {
+    background-color: var(--color-pool-coral);
+    color: var(--color-brutalist-black);
+    padding: 0.75rem 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 3px solid var(--color-brutalist-black);
+    box-shadow: 4px 4px 0 var(--color-brutalist-black);
+    transition: all 0.1s ease;
+  }
+
+  .pool-btn:hover {
+    background-color: var(--color-pool-mint);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-brutalist-black);
+  }
+
+  .pool-btn-secondary {
+    background-color: var(--color-pool-lavender);
+    color: white;
+  }
+
+  .retro-card {
+    background-color: var(--color-retro-cream);
+    border: 2px solid var(--color-retro-brown);
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 var(--color-retro-brown);
+  }
+
+  .example-preview {
+    border: 2px solid var(--color-retro-brown);
+    background-color: var(--color-retro-cream);
+    padding: 2rem;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .code-block {
+    font-family: var(--font-family-mono);
+    font-size: 0.875rem;
+    background-color: var(--color-retro-charcoal);
+    color: var(--color-pool-peach);
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .section-header {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-header {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-header {
+      font-size: 6rem;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: var(--color-pool-coral);
+    color: white;
+  }
+}
+
+/* Minimalist Design System Styles */
+@layer components {
+  /* Hero Section */
+  .minism-hero {
+    background-color: var(--color-minimalist-offwhite);
+    padding: 80px 0 120px;
+    border-bottom: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 64px;
+    font-size: 0.8125rem;
+  }
+
+  .minism-nav-logo {
+    color: var(--color-minimalist-charcoal);
+    font-weight: 500;
+  }
+
+  .minism-nav-divider {
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-nav-current {
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-hero-tag {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-minimalist-gray);
+    margin-bottom: 16px;
+  }
+
+  .minism-hero-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    color: var(--color-minimalist-charcoal);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .minism-hero-subtitle {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--color-minimalist-gray);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 48px;
+  }
+
+  .minism-hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .minism-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .minism-meta-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-meta-value {
+    font-size: 0.875rem;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-meta-divider {
+    width: 1px;
+    height: 32px;
+    background-color: var(--color-minimalist-border);
+  }
+
+  /* Section Styles */
+  .minism-section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-section-alt {
+    background-color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-section-alt .minism-section-label,
+  .minism-section-alt .minism-heading,
+  .minism-section-alt .minism-heading-lg,
+  .minism-section-alt .minism-paragraph {
+    color: var(--color-minimalist-offwhite);
+  }
+
+  .minism-section-alt .minism-section-label {
+    opacity: 0.6;
+  }
+
+  .minism-section-alt .minism-paragraph {
+    opacity: 0.8;
+  }
+
+  .minism-section-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-minimalist-gray);
+    margin-bottom: 16px;
+  }
+
+  .minism-section-example {
+    background-color: var(--color-minimalist-light-gray);
+  }
+
+  /* Headings */
+  .minism-heading {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--color-minimalist-charcoal);
+    margin-bottom: 24px;
+  }
+
+  .minism-heading-lg {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--color-minimalist-charcoal);
+    margin-bottom: 48px;
+  }
+
+  /* Prose */
+  .minism-prose {
+    margin-bottom: 48px;
+  }
+
+  .minism-paragraph {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--color-minimalist-gray);
+    margin-bottom: 20px;
+  }
+
+  .minism-paragraph:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Quote */
+  .minism-quote {
+    padding: 48px 0;
+    margin: 48px 0;
+    border-top: 1px solid var(--color-minimalist-border);
+    border-bottom: 1px solid var(--color-minimalist-border);
+    text-align: center;
+  }
+
+  .minism-section-alt .minism-quote {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .minism-quote-text {
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-minimalist-charcoal);
+    margin-bottom: 16px;
+  }
+
+  .minism-section-alt .minism-quote-text {
+    color: var(--color-minimalist-offwhite);
+  }
+
+  .minism-quote-cite {
+    font-size: 0.875rem;
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-section-alt .minism-quote-cite {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Grid System */
+  .minism-grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  .minism-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    .minism-grid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Cards */
+  .minism-card {
+    background-color: var(--color-minimalist-offwhite);
+    border: 1px solid var(--color-minimalist-border);
+    padding: 32px;
+    transition: border-color 0.2s ease;
+  }
+
+  .minism-card:hover {
+    border-color: var(--color-minimalist-gray);
+  }
+
+  .minism-section-alt .minism-card {
+    background-color: transparent;
+  }
+
+  .minism-card-number {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--color-minimalist-gray);
+    letter-spacing: 0.05em;
+  }
+
+  .minism-card-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    color: var(--color-minimalist-charcoal);
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+
+  .minism-section-alt .minism-card-title {
+    color: var(--color-minimalist-offwhite);
+  }
+
+  .minism-card-text {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-card-example {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-example-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-minimalist-gray);
+    margin-bottom: 8px;
+  }
+
+  .minism-example-value {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-section-alt .minism-example-value {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Visual Examples Container */
+  .minism-example-container {
+    background-color: var(--color-minimalist-offwhite);
+    border: 1px solid var(--color-minimalist-border);
+    padding: 48px;
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+  }
+
+  .minism-section-alt .minism-example-container {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Hero Example */
+  .minism-example-hero {
+    text-align: center;
+  }
+
+  .minism-example-tag {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-minimalist-gray);
+    margin-bottom: 16px;
+  }
+
+  .minism-example-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--color-minimalist-charcoal);
+    margin-bottom: 12px;
+  }
+
+  .minism-example-text {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: var(--color-minimalist-gray);
+  }
+
+  /* White Space Demo */
+  .minism-whitespace-demo {
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    border: 1px dashed var(--color-minimalist-border);
+  }
+
+  .minism-whitespace-block {
+    padding: 24px;
+    background-color: var(--color-minimalist-light-gray);
+    border: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-whitespace-block-small {
+    padding: 16px;
+  }
+
+  .minism-whitespace-label {
+    font-size: 0.75rem;
+    color: var(--color-minimalist-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .minism-whitespace-spacer {
+    height: 48px;
+    position: relative;
+  }
+
+  .minism-whitespace-spacer::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    border-left: 1px dashed var(--color-minimalist-gray);
+    transform: translateX(-50%);
+  }
+
+  /* Typography Demo */
+  .minism-typography-demo {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .minism-type-h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--color-minimalist-charcoal);
+    letter-spacing: -0.02em;
+  }
+
+  .minism-type-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .minism-type-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-type-size {
+    font-size: 0.875rem;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  /* Card Demo */
+  .minism-card-demo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+
+  .minism-card-demo .minism-card {
+    padding: 24px;
+  }
+
+  .minism-card-demo .minism-card-title {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .minism-card-demo .minism-card-text {
+    font-size: 0.8125rem;
+  }
+
+  /* Grid Demo */
+  .minism-grid-demo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  .minism-grid-item {
+    height: 32px;
+    background-color: var(--color-minimalist-light-gray);
+    border: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-grid-full { grid-column: span 6; }
+  .minism-grid-half { grid-column: span 3; }
+  .minism-grid-third { grid-column: span 2; }
+
+  /* Code Block */
+  .minism-code-wrapper {
+    margin: 32px 0;
+  }
+
+  .minism-code-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: var(--color-minimalist-charcoal);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .minism-section-alt .minism-code-header {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .minism-code-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .minism-code-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-minimalist-gray);
+    opacity: 0.5;
+  }
+
+  .minism-code-title {
+    font-size: 0.75rem;
+    color: var(--color-minimalist-offwhite);
+    opacity: 0.6;
+  }
+
+  .minism-code-block {
+    font-family: var(--font-family-mono);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: var(--color-minimalist-offwhite);
+    padding: 24px;
+    overflow-x: auto;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .minism-section-alt .minism-code-block {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Tips Grid */
+  .minism-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 640px) {
+    .minism-tips-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .minism-tip {
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  .minism-tip-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-minimalist-charcoal);
+    margin-bottom: 8px;
+  }
+
+  .minism-tip-text {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-minimalist-gray);
+  }
+
+  /* List Cards */
+  .minism-list-card {
+    padding: 32px;
+    background-color: var(--color-minimalist-offwhite);
+    border: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-list-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-minimalist-border);
+  }
+
+  .minism-list-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .minism-list-card-success .minism-list-icon {
+    color: #22c55e;
+  }
+
+  .minism-list-card-danger .minism-list-icon {
+    color: #ef4444;
+  }
+
+  .minism-list-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .minism-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-minimalist-charcoal);
+    line-height: 1.5;
+  }
+
+  .minism-list-check {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #22c55e;
+  }
+
+  .minism-list-check-x {
+    color: #ef4444;
+  }
+
+  /* Button Demo */
+  .minism-button-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .minism-btn {
+    padding: 14px 28px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .minism-btn-primary {
+    background-color: var(--color-minimalist-charcoal);
+    color: var(--color-minimalist-offwhite);
+    border-color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-btn-primary:hover {
+    background-color: #1a1a1a;
+  }
+
+  .minism-btn-outline {
+    background-color: transparent;
+    color: var(--color-minimalist-charcoal);
+    border-color: var(--color-minimalist-border);
+  }
+
+  .minism-btn-outline:hover {
+    border-color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-btn-ghost {
+    background-color: transparent;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-btn-ghost:hover {
+    background-color: var(--color-minimalist-light-gray);
+  }
+
+  /* Principles */
+  .minism-principles {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .minism-principle {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .minism-principle:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .minism-principle-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+  }
+
+  .minism-principle-icon {
+    width: 16px;
+    height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .minism-principle-content {
+    flex: 1;
+  }
+
+  .minism-principle-title {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-minimalist-offwhite);
+    margin-bottom: 8px;
+  }
+
+  .minism-principle-text {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Implementation */
+  .minism-implementation {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .minism-impl-step {
+    display: flex;
+    gap: 24px;
+  }
+
+  .minism-impl-number {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--color-minimalist-gray);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  .minism-impl-content {
+    flex: 1;
+  }
+
+  .minism-impl-title {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-minimalist-charcoal);
+    margin-bottom: 12px;
+  }
+
+  .minism-impl-text {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: var(--color-minimalist-gray);
+    margin-bottom: 16px;
+  }
+
+  .minism-inline-code {
+    font-family: var(--font-family-mono);
+    font-size: 0.8125rem;
+    background-color: var(--color-minimalist-light-gray);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .minism-impl-code {
+    font-family: var(--font-family-mono);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: var(--color-minimalist-offwhite);
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  .minism-impl-examples {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .minism-impl-examples {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .minism-impl-example {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    background-color: var(--color-minimalist-light-gray);
+    border-radius: 4px;
+  }
+
+  .minism-impl-class {
+    font-family: var(--font-family-mono);
+    font-size: 0.75rem;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-impl-desc {
+    font-size: 0.75rem;
+    color: var(--color-minimalist-gray);
+  }
+
+  /* Color Palette */
+  .minism-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .minism-palette-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+  }
+
+  .minism-palette-swatch {
+    width: 80px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid var(--color-minimalist-border);
+    flex-shrink: 0;
+  }
+
+  .minism-palette-offwhite { background-color: #FAFAF8; }
+  .minism-palette-charcoal { background-color: #2C2C2C; }
+  .minism-palette-gray { background-color: #8A8A8A; }
+  .minism-palette-light-gray { background-color: #E5E5E3; }
+  .minism-palette-border { background-color: #E8E8E6; }
+
+  .minism-palette-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .minism-palette-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-palette-hex {
+    font-family: var(--font-family-mono);
+    font-size: 0.75rem;
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-palette-var {
+    font-family: var(--font-family-mono);
+    font-size: 0.6875rem;
+    color: var(--color-minimalist-gray);
+    opacity: 0.7;
+  }
+
+  /* Navigation Section */
+  .minism-nav-section {
+    padding: 64px 0;
+    background-color: var(--color-minimalist-offwhite);
+  }
+
+  .minism-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .minism-nav-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .minism-nav-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    border: 1px solid var(--color-minimalist-border);
+    transition: border-color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .minism-nav-card:hover {
+    border-color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-nav-direction {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-minimalist-gray);
+  }
+
+  .minism-nav-arrow {
+    width: 14px;
+    height: 14px;
+  }
+
+  .minism-nav-arrow-left {
+    transform: rotate(180deg);
+  }
+
+  .minism-nav-name {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--color-minimalist-charcoal);
+  }
+
+  .minism-nav-next {
+    text-align: right;
+  }
+
+  .minism-nav-next .minism-nav-direction {
+    justify-content: flex-end;
+  }
+}
